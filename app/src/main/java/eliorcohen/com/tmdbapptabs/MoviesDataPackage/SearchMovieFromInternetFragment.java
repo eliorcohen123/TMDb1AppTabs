@@ -20,6 +20,7 @@ import java.util.List;
 
 import eliorcohen.com.tmdbapptabs.CustomAdapterPackage.MovieCustomAdapterInternet;
 import eliorcohen.com.tmdbapptabs.DataAppPackage.MovieModel;
+import eliorcohen.com.tmdbapptabs.MainAndOtherPackage.ItemDecoration;
 import eliorcohen.com.tmdbapptabs.RetrofitPackage.GetDataService;
 import eliorcohen.com.tmdbapptabs.DataAppPackage.JSONResponse;
 import eliorcohen.com.tmdbapptabs.R;
@@ -35,6 +36,7 @@ public class SearchMovieFromInternetFragment extends Fragment {
     private MovieCustomAdapterInternet mAdapterInternet;
     private RecyclerView recyclerView;
     private EditText editTextSearch;
+    private ItemDecoration itemDecoration;
     private View mView;
 
     @Override
@@ -103,6 +105,10 @@ public class SearchMovieFromInternetFragment extends Fragment {
     private void generateDataList(List<MovieModel> photoList) {
         mAdapterInternet = new MovieCustomAdapterInternet(getContext(), photoList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        if (itemDecoration == null) {
+            itemDecoration = new ItemDecoration(20);
+            recyclerView.addItemDecoration(itemDecoration);
+        }
         recyclerView.setAdapter(mAdapterInternet);
     }
 

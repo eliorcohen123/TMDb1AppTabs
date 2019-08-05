@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import eliorcohen.com.tmdbapptabs.CustomAdapterPackage.MovieCustomAdapterMain;
 import eliorcohen.com.tmdbapptabs.DataAppPackage.MovieDBHelper;
 import eliorcohen.com.tmdbapptabs.DataAppPackage.MovieModel;
+import eliorcohen.com.tmdbapptabs.MainAndOtherPackage.ItemDecoration;
 import eliorcohen.com.tmdbapptabs.R;
 
 /*
@@ -48,6 +49,7 @@ public class FavoritesFragment extends Fragment {
     private MovieDBHelper mMovieDBHelper;  // The SQLiteHelper of the app
     private SwipeRefreshLayout swipeRefreshLayout;  // SwipeRe freshLayout of FavoritesFragment
     private RecyclerView recyclerView;
+    private ItemDecoration itemDecoration;
     private View mView;
 
     @Override
@@ -107,6 +109,10 @@ public class FavoritesFragment extends Fragment {
     private void myRecyclerView() {
         mAdapterMain = new MovieCustomAdapterMain(getContext(), mMovieListMain);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        if (itemDecoration == null) {
+            itemDecoration = new ItemDecoration(20);
+            recyclerView.addItemDecoration(itemDecoration);
+        }
         recyclerView.setAdapter(mAdapterMain);
     }
 
