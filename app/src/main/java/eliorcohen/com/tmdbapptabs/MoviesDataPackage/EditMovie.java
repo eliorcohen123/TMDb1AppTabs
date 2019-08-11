@@ -137,17 +137,20 @@ public class EditMovie extends AppCompatActivity implements View.OnClickListener
                     Intent intentEditToMain = new Intent(EditMovie.this, MainActivity.class);
                     startActivity(intentEditToMain);
                 }
+                break;
             case R.id.textViewShow:
                 MediaPlayer sShowImage = MediaPlayer.create(EditMovie.this, R.raw.show_image_sound);
                 sShowImage.start();  // Play sound
 
                 URL.setVisibility(View.INVISIBLE);
                 imageView.setVisibility(View.VISIBLE);
+                break;
             case R.id.btnBack:
                 MediaPlayer sCancel = MediaPlayer.create(EditMovie.this, R.raw.cancel_and_move_sound);
                 sCancel.start();  // Play sound
 
                 onBackPressed();
+                break;
         }
     }
 

@@ -2,7 +2,9 @@ package eliorcohen.com.tmdbapptabs.MainAndOtherPackage;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.Button;
 
@@ -19,7 +21,6 @@ public class Credits extends AppCompatActivity implements View.OnClickListener {
 
         initUI();
         initListeners();
-        btnBack();
     }
 
     private void initUI() {
@@ -30,19 +31,6 @@ public class Credits extends AppCompatActivity implements View.OnClickListener {
         buttonOK.setOnClickListener(this);
     }
 
-    private void btnBack() {
-        // Button are back to the previous activity
-        buttonOK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MediaPlayer sCancel = MediaPlayer.create(Credits.this, R.raw.cancel_and_move_sound);
-                sCancel.start();  // Play sound
-
-                onBackPressed();
-            }
-        });
-    }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -51,6 +39,7 @@ public class Credits extends AppCompatActivity implements View.OnClickListener {
                 sCancel.start();  // Play sound
 
                 onBackPressed();
+                break;
         }
     }
 
