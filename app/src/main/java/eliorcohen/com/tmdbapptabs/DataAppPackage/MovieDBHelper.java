@@ -160,6 +160,7 @@ public class MovieDBHelper extends SQLiteOpenHelper {
             movieModel.setId(id);
             movieModels.add(movieModel);
         }
+        cursor.close();
         return movieModels;
     }
 

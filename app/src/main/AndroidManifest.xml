@@ -59,8 +59,8 @@
         <activity android:name="eliorcohen.com.tmdbapptabs.MoviesDataPackage.AddMovieFromInternet" />
         <activity android:name="eliorcohen.com.tmdbapptabs.MoviesDataPackage.DeleteMovie" />
         <activity android:name="eliorcohen.com.tmdbapptabs.MoviesDataPackage.DataOfMovie" />
-        <activity android:name="eliorcohen.com.tmdbapptabs.MainAndOtherPackage.MainActivity" />
         <activity android:name="eliorcohen.com.tmdbapptabs.MainAndOtherPackage.Credits" />
+        <activity android:name="eliorcohen.com.tmdbapptabs.MainAndOtherPackage.MainActivity" />
         <activity android:name="eliorcohen.com.tmdbapptabs.LoginPackage.FingerPrint" />
         <activity android:name="eliorcohen.com.tmdbapptabs.LoginPackage.RegisterActivity" />
         <activity android:name="eliorcohen.com.tmdbapptabs.LoginPackage.UsersListActivity" />
