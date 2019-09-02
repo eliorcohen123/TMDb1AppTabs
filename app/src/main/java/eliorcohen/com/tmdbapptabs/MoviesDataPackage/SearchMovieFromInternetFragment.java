@@ -80,7 +80,7 @@ public class SearchMovieFromInternetFragment extends Fragment {
         GetDataService apiService = RetrofitClientInstance.getRetrofitInstance().create(GetDataService.class);
         Observable<JSONResponse> observable = apiService.getAllMovies("/3/search/movie?/&query="
                 + query +
-                "&api_key=4e0be2c22f7268edffde97481d49064a&language=en-US").subscribeOn(Schedulers.newThread())
+                "&api_key=" + getString(R.string.key_search) + "&language=en-US").subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread());
         observable.subscribe(new Observer<JSONResponse>() {
             @Override
