@@ -1,4 +1,4 @@
-package eliorcohen.com.tmdbapptabs.MainAndOtherPackage;
+package eliorcohen.com.tmdbapptabs.CustomAdapterPackage;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -9,10 +9,11 @@ import eliorcohen.com.tmdbapptabs.MoviesDataPackage.SearchMovieFromInternetFragm
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
 
-    private int mNumOfTabs;
+    private final int mNumOfTabs;
 
     public PagerAdapter(FragmentManager fm, int NumOfTabs) {
         super(fm);
+
         this.mNumOfTabs = NumOfTabs;
     }
 

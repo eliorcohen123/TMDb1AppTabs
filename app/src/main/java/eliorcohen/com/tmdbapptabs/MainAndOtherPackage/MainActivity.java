@@ -19,6 +19,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
+import eliorcohen.com.tmdbapptabs.CustomAdapterPackage.PagerAdapter;
 import eliorcohen.com.tmdbapptabs.LoginPackage.UsersListActivity;
 import eliorcohen.com.tmdbapptabs.MoviesDataPackage.AddMovie;
 import eliorcohen.com.tmdbapptabs.MoviesDataPackage.DeleteAllData;
